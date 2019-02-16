@@ -59,37 +59,45 @@
 </form>
 
 <br/>
-{% if student_in_room   %}
+{% if student_inroom_absent   %}
 <div class="row">
     <div class="col-md-12">
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">ชื่อ - สกุล</th>
-              <th scope="col">รหัส</th>
-              <th scope="col">มา/ไม่มา เรียน</th>
-            </tr>
-          </thead>
-          <tbody>
-           {% for room in student_in_room %}
-            <tr>
-              <th scope="row">{{forloop.counter}}</th>
-              <td>{{room.student}}</td>
-              <td>{{room.code}}</td>
-              <td>
-                  <select name="absent"  class="form-control">
-                    <option>Choose...</option>
-                      {% for t in absents %}
-                         <option value="{{t.id}}" {%if t.id|slugify  == room%} selected {% endif %}>{{t.name}}</option>
-                      {% endfor %}
-                </select>
-              </td>
-            </tr>
-           {% endfor %}
+        <form method="post" action="{%url 'webs:save_absent' %}">
+            {% csrf_token %}
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">ชื่อ - สกุล</th>
+                  <th scope="col">รหัส</th>
+                  <th scope="col">มา/ไม่มา เรียน</th>
+                </tr>
+              </thead>
+              <tbody>
+               {% for room in student_inroom_absent %}
+                <tr>
+                  <th scope="row">{{forloop.counter}}</th>
+                  <td>{{room.student}}</td>
+                  <td>{{room.student.code}}</td>
+                  <td>
+                      <input type="hidden" name="student_inroom" value="{{room.id}}"/>
+                      <select name="absent"  class="form-control">
+                        <option>Choose...</option>
+                          {% for t in absents %}
+                             <option value="{{t.id}}" {%if t.id  == room.absent.id%} selected {% endif %}>{{t.name}}</option>
+                          {% endfor %}
+                    </select>
+                  </td>
+                </tr>
+               {% endfor %}
 
-          </tbody>
-        </table>
+              </tbody>
+            </table>
+
+            <div class="form-group"  style="text-align: right;">
+                <button type="submit" class="btn btn-success">บันทึก</button>
+             </div>
+        </form>
     </div>
 </div>
 {% endif %}
