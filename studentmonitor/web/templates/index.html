@@ -51,9 +51,48 @@
                 </select>
 
       </div>
+         <div class="form-group">
 
-  <button type="submit" class="btn btn-primary">แสดง</button>
+         <a href="{% url  'webs:index' %}" class="btn btn-danger">Reset</a>
+            <button type="submit" class="btn btn-primary">แสดง</button>
+         </div>
 </form>
+
+<br/>
+{% if student_in_room   %}
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">ชื่อ - สกุล</th>
+              <th scope="col">รหัส</th>
+              <th scope="col">มา/ไม่มา เรียน</th>
+            </tr>
+          </thead>
+          <tbody>
+           {% for room in student_in_room %}
+            <tr>
+              <th scope="row">{{forloop.counter}}</th>
+              <td>{{room.student}}</td>
+              <td>{{room.code}}</td>
+              <td>
+                  <select name="absent"  class="form-control">
+                    <option>Choose...</option>
+                      {% for t in absents %}
+                         <option value="{{t.id}}" {%if t.id|slugify  == room%} selected {% endif %}>{{t.name}}</option>
+                      {% endfor %}
+                </select>
+              </td>
+            </tr>
+           {% endfor %}
+
+          </tbody>
+        </table>
+    </div>
+</div>
+{% endif %}
 {% endblock %}
 
 

@@ -51,3 +51,23 @@ class StudentInRoom(models.Model):
     current_year = models.IntegerField(blank=True, null=True,default=2561)
     def __str__(self):
         return r"%s (%s)" %(self.room, self.student)
+
+
+class TeacherInRoom(models.Model):
+    teach_date = models.DateField(blank=True, null=True)
+    time = models.CharField(max_length=200,blank=True, null=True)
+    subject = models.ForeignKey(Subject, on_delete=models.CASCADE, blank=True, null=True)
+    teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE, blank=True, null=True)
+    room = models.ForeignKey(Room, on_delete=models.CASCADE,blank=True, null=True )
+
+
+    def __str__(self):
+        return r"%s %s (%s)" % (self.teach_date, self.subject, self.teacher)
+
+class StudentAbsent(models.Model):
+    teacherinroom = models.ForeignKey(TeacherInRoom, on_delete=models.CASCADE, blank=True, null=True)
+    student = models.ForeignKey(Student, on_delete=models.CASCADE, blank=True, null=True)
+    absent = models.ForeignKey(Absent, on_delete=models.CASCADE, blank=True, null=True)
+
+    def __str__(self):
+        return r"%s %s" % (self.student, self.absent)
