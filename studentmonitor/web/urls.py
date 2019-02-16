@@ -17,7 +17,8 @@ from django.contrib import admin
 from django.urls import path
 from web.views import index
 
+app_name = 'webs'
 urlpatterns = [
-    path('',index),
+    path('', index, name='index'),
 
 ]
