@@ -32,10 +32,11 @@
 
     <!-- Sidebar -->
     <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading">Start Bootstrap </div>
+      <div class="sidebar-heading">Student Monitor </div>
       <div class="list-group list-group-flush">
         <a href="{% url  'webs:index' %}" class="list-group-item list-group-item-action bg-light">Student</a>
-
+        <a href="/admin/" class="list-group-item list-group-item-action bg-light">ข้อมุล</a>
+        <a href="{% url 'webs:report_index' %}" class="list-group-item list-group-item-action bg-light">รายงาน</a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -50,27 +51,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-          </ul>
-        </div>
+
       </nav>
 
 
@@ -91,6 +72,8 @@
   <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
   <script src="{% static 'vendor/bootstrap-datepicker/js/bootstrap-datepicker.js' %}"></script>
   <script src="{% static 'vendor/bootstrap-datepicker/locales/bootstrap-datepicker.th.min.js' %}"  charset="UTF-8"></script>
+
+  <script src="{% static 'vendor/chart.js/chart.js' %}"></script>
   <!-- Menu Toggle Script -->
   <script>
     $("#menu-toggle").click(function(e) {

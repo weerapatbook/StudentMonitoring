@@ -1,61 +1,91 @@
 from datetime import datetime
 from django.shortcuts import render
 from django.http import HttpResponse
-from web.models import Teacher, Subject, Room, StudentInRoom,Absent, TeacherInRoom, StudentAbsent
-
+from .models import Teacher, Subject, Room, StudentInRoom,Absent, TeacherInRoom, StudentAbsent
+from .linenotify import sendMessage
 # Create your views here.
-def index(request):
 
+def index(request):
+    '''
+    สำหรับการบันทึก กิจกรรม การเข้าเรียนของนักเรียน
+    :param request:
+    :return:
+    '''
+
+    #ค้นหารายชื่อของครูมาทั้งหมด
     teachers = Teacher.objects.all()
+    # ค้นหารายชื่อของวิชาที่สอนมาทั้งหมด
     subjects = Subject.objects.all()
+    # ค้นหารายชื่อของห้องนักเรียนมาทั้งหมด
     rooms = Room.objects.all()
+    # ค้นหารายการ มา/ไม่มาเรียน มาทั้งหมด
     absents = Absent.objects.all()
 
+    #กำหนดค่าตัวแปรให้เป็นช่องว่าไว้ก่อน
+    #เวลาที่สอน
     teach_time = ''
+    #คาบที่สอน
     time= ''
+    # วิชาที่สอน
     subject=''
+    # ครูผู้สอน
     teacher=''
+    # ห้องเรียน
     room=''
+    # รายชื่อนักเรียนที่มา/ไม่มาเรียน
     student_inroom_absent =[]
 
+    # สำหรับการกดปุ่มค้นหาจะให้ทำงาน
     if request.method == 'POST':
-        print(request.POST)
+        # รับข้อมูล วันที่สอน มาแปลงจากข้อความให้อยู่ในรูป Datetime ตามรูปแบบของ dd/mm/yyyy
         teach_time = request.POST.get('teach_time')
         teach_date = datetime.strptime(teach_time, '%d/%m/%Y')
 
+        # รับข้อมูล คาบที่สอน
         time = request.POST.get('time')
+        # รับข้อมูล วิชาที่สอน
         subject = request.POST.get('subject')
+        # รับข้อมูล ครูที่สอน
         teacher = request.POST.get('teacher')
-        room = request.POST.get('teacher')
+        # รับข้อมูล ห้องที่สอน
+        room = request.POST.get('room')
 
+        # ค้นหาข้อมูลห้องที่รับมา จากฐานข้อมูลเพื่อให้ได้รายละเอียดมากขึ้น
         room_select = Room.objects.get(pk=room)
-
+        # ค้นหาข้อมูลครูผู้สอนที่รับมา จากฐานข้อมูลเพื่อให้ได้รายละเอียดมากขึ้น
         teacher_select = Teacher.objects.get(pk=teacher)
+        # ค้นหาข้อมูลวิชาที่รับมา จากฐานข้อมูลเพื่อให้ได้รายละเอียดมากขึ้น
         subject_select = Subject.objects.get(pk=subject)
 
-
+        # ค้นหาข้อมูลตามวันที่ ครูผู้สอน คาบ วิชา ห้องที่สอน จาก ข้อมูลครูที่สอนในห้อง
         teacherInRoom = TeacherInRoom.objects.filter(time = time, subject= subject_select, \
                                      teacher=teacher_select, room =room_select,\
                                      teach_date = teach_date).first()
 
+        # ตรวจสอบถ้ายังไม่มีการบันทึกให้ทำการบันทึก
         if teacherInRoom is None:
+            # ค้นหาข้อมูลห้องที่รับมา จากฐานข้อมูลเพื่อให้ได้รายละเอียดมากขึ้น
             teacherInRoom = TeacherInRoom(time = time, subject= subject_select, \
                                      teacher=teacher_select, room =room_select,\
                                      teach_date = teach_date)
             teacherInRoom.save()
+
+        # ค้นหารายชื่อนักเรียนในห้องที่ได้เลือกไว้แล้ว
         student_in_room = StudentInRoom.objects.filter(room=room_select).all()
-
-
+        # เพือนำรายชื่อนักเรียนทั้งหมดในห้อง มาบันทึกลงในตาราง นักเรียนที่มา / ไม่มาเรียนตามกลุ่มที่ได้เลือกไว้
         for inroom in student_in_room:
+            # ตรวจสอบ ข้อมูลในตาราง นักเรียนที่มา / ไม่มาเรียน ก่อนว่ามีการบันทึกไว้หรือไม่ถ้ายังไม่มีให้บันทึกใหม่
             student_absent  = StudentAbsent.objects.filter(student = inroom.student, teacherinroom = teacherInRoom).first()
 
             if student_absent is None:
+                # บันทึกนักเรียนกับ รายการครูที่สอนตามข้อมูลที่เลือกไว้
                 student_absent = StudentAbsent(student = inroom.student, teacherinroom = teacherInRoom)
                 student_absent.save()
 
+            # นำข้อมูลเก็บลงตัวแปร เพื่อนำไปแสดง
             student_inroom_absent.append(student_absent)
 
-
+    # เตรียมข้อมูลเพื่อนำไปแสดงบนหน้า html
     context = {'teachers': teachers,
                'subjects': subjects,
                'rooms': rooms,
@@ -72,19 +102,65 @@ def index(request):
 
 
 def savestudentabsent(request):
+    '''
+    บันทึหข้อมูลนักเรียนที่มา หรือไม่มาตามที่ครูได้เลือกไวเ
+    :param request:
+    :return:
+    '''
     if request.method == 'POST':
         print(request.POST)
         student_inroom = request.POST.getlist('student_inroom')
         absent = request.POST.getlist('absent')
 
+        #ตรวจสอบว่ามีการบันทึกไว้หรือไว้ โดยตรวจสอบกับ promary key ข้องตารางถ้ามีให้ทำการ update
+        #ในเงื่อนไขนี้จะต้องมีข้อมูลอยู่แล้ว เพราะได้มีการเพิ่ม (Insert) ข้อมุลไว้ก่อนหน้านี้
         for i in range(0, len(absent)):
-            print("%s %s" %(student_inroom[i], absent[i]))
-            studentAbsent = StudentAbsent.objects.get(pk=student_inroom[i])
 
+            studentAbsent = StudentAbsent.objects.get(pk=student_inroom[i])
             std_absent = Absent.objects.get(pk=absent[i])
-            studentAbsent.absent = std_absent
-            studentAbsent.save()
+            if studentAbsent:
+                #ทำการบันทึก การมา/ไม่มา ของนักเรียน
+                studentAbsent.absent = std_absent
+                studentAbsent.save()
+
+                # ส่งข้อมูลของนักเรียนและ ชื่อครู วันที่ คาบ สถานะการมา ไปยัง line
+                if std_absent.send_alert :
+                    message = "นักเรียน %s ในวิชา %s คาบเรียน %s ของครู %s วันที่ %s สถานะ %s" \
+                    %(studentAbsent.student, studentAbsent.teacherinroom.subject,
+                      studentAbsent.teacherinroom.time,
+                      studentAbsent.teacherinroom.teacher,
+                      studentAbsent.teacherinroom.teach_date,
+                      studentAbsent.absent)
+
+                    sendMessage(message)
+            else:
+                print("error : update")
     context = {
                }
 
     return render(request, 'save.html', context)
+
+def report_index(request):
+    start_teach_time = datetime.now().strftime("%d/%m/%Y")
+    stop_teach_time = datetime.now().strftime("%d/%m/%Y")
+    if request.method == 'POST':
+        print(request.POST)
+
+        start_teach_time = request.POST.get('start_teach_time' )
+        stop_teach_time = request.POST.get('stop_teach_time' )
+        if len(start_teach_time) == 0:
+            start_teach_time = datetime.now().strftime("%d/%m/%Y")
+        if len(stop_teach_time) == 0:
+            stop_teach_time = datetime.now().strftime("%d/%m/%Y")
+
+
+
+        start_time = datetime.strptime(start_teach_time, '%d/%m/%Y')
+        stop_time = datetime.strptime(stop_teach_time, '%d/%m/%Y')
+
+        #StudentAbsent
+
+    context = { 'start_teach_time': start_teach_time,
+                'stop_teach_time' : stop_teach_time
+                }
+    return render(request, 'report_index.html', context)
