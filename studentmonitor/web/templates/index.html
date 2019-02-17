@@ -9,7 +9,7 @@
             <div class="form-group col-md-5">
               <label for="inputdatepicker">วันที่</label>
                 <div class="input-group date" data-provide="datepicker" id='datetimepicker1'>
-                    <input id="inputdatepicker" name="teach_time" value="{{teach_time}}" type="text" class="form-control" placeholder="">
+                    <input id="inputdatepicker" name="teach_time" value="{{teach_time}}" type="text" class="form-control" placeholder="" required>
                     <div class="input-group-addon">
                         <span class="glyphicon glyphicon-th"></span>
                     </div>
@@ -18,12 +18,12 @@
             </div>
             <div class="form-group col-md-2">
               <label for="inputTime">คาบที่</label>
-              <input type="text" class="form-control" id="inputTime"  name="time"  value="{{time}}"  placeholder="">
+              <input type="text" class="form-control" id="inputTime"  name="time"  value="{{time}}"  placeholder="" required>
             </div>
             <div class="form-group col-md-5">
               <label for="inputSubject">วิชา</label>
-                <select  id="inputSubject" name="subject"  class="form-control">
-                    <option>Choose...</option>
+                <select  id="inputSubject" name="subject"  class="form-control" required>
+                    <option value="">Choose...</option>
                       {% for t in subjects %}
                          <option value="{{t.id}}" {%if t.id|slugify  == subject%} selected {% endif %}>{{t.name}} </option>
                       {% endfor %}
@@ -33,8 +33,8 @@
       </div>
       <div class="form-group">
         <label for="inputTeacher">ครูผู้สอน</label>
-          <select  id="inputTeacher" name="teacher"  class="form-control">
-            <option >Choose...</option>
+          <select  id="inputTeacher" name="teacher"  class="form-control" required>
+            <option  value="">Choose...</option>
               {% for t in teachers %}
                  <option value="{{t.id}}" {%if t.id|slugify  == teacher%} selected {% endif %}>{{t.name}}</option>
               {% endfor %}
@@ -43,8 +43,8 @@
       </div>
       <div class="form-group">
         <label for="inputRoom">ชั้นเรียน</label>
-          <select  id="inputRoom" name="room"  class="form-control">
-                    <option>Choose...</option>
+          <select  id="inputRoom" name="room"  class="form-control" required>
+                    <option value="">Choose...</option>
                       {% for t in rooms %}
                          <option value="{{t.id}}" {%if t.id|slugify  == room%} selected {% endif %}>{{t.name}}</option>
                       {% endfor %}
