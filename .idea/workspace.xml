@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dff9f581-164c-415c-a10d-eb6746761a68" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/studentmonitor/web/static/vendor/chart.js/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/studentmonitor/web/templates/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/studentmonitor/web/templates/layout/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/studentmonitor/web/templates/report_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/studentmonitor/web/templates/report_index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/studentmonitor/web/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/studentmonitor/web/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,11 +12,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studentmonitor/web/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="166">
-              <caret line="183" column="10" selection-start-line="183" selection-start-column="10" selection-end-line="183" selection-end-column="10" />
+              <caret line="183" column="33" lean-forward="true" selection-start-line="183" selection-start-column="33" selection-end-line="183" selection-end-column="33" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -28,11 +24,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/studentmonitor/web/templates/report_index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="95" selection-start-line="4" selection-start-column="95" selection-end-line="4" selection-end-column="95" />
+            <state relative-caret-position="375">
+              <caret line="20" column="55" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
               <folding>
                 <element signature="n#style#0;n#canvas#0;n#!!top" expanded="true" />
               </folding>
@@ -103,8 +99,8 @@
         <option value="$PROJECT_DIR$/studentmonitor/studentmonitor/settings.py" />
         <option value="$PROJECT_DIR$/studentmonitor/web/static/vendor/chart.js/utils.js" />
         <option value="$PROJECT_DIR$/studentmonitor/web/templates/layout/base.html" />
-        <option value="$PROJECT_DIR$/studentmonitor/web/templates/report_index.html" />
         <option value="$PROJECT_DIR$/studentmonitor/web/views.py" />
+        <option value="$PROJECT_DIR$/studentmonitor/web/templates/report_index.html" />
       </list>
     </option>
   </component>
@@ -321,19 +317,26 @@
       <option name="project" value="LOCAL" />
       <updated>1550377075098</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="init">
+      <created>1550383518611</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1550383518611</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15058325" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15058325" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3642857" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3642857" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -535,22 +538,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studentmonitor/web/templates/report_index.html">
+    <entry file="file://$PROJECT_DIR$/studentmonitor/web/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="95" selection-start-line="4" selection-start-column="95" selection-end-line="4" selection-end-column="95" />
+        <state relative-caret-position="166">
+          <caret line="183" column="33" lean-forward="true" selection-start-line="183" selection-start-column="33" selection-end-line="183" selection-end-column="33" />
           <folding>
-            <element signature="n#style#0;n#canvas#0;n#!!top" expanded="true" />
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studentmonitor/web/views.py">
+    <entry file="file://$PROJECT_DIR$/studentmonitor/web/templates/report_index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="183" column="10" selection-start-line="183" selection-start-column="10" selection-end-line="183" selection-end-column="10" />
+        <state relative-caret-position="375">
+          <caret line="20" column="55" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
           <folding>
-            <element signature="e#0#29#0" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
