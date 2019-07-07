@@ -6,7 +6,7 @@ import requests,json
 import urllib.parse
 
 #token สำหรับส่งข้อความเข้า line กลุ่ม
-LINE_ACCESS_TOKEN="cv539ItjdKEl8hWROFrbMmwz1wxGQE9WDXwM53csbj6"
+LINE_ACCESS_TOKEN="9CD4rqw9Q2Hagu7fopCwWwPeNNHsqBS2yFuXuQoGJIS"
 url = "https://notify-api.line.me/api/notify"
 
 
