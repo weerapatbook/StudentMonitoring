@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dff9f581-164c-415c-a10d-eb6746761a68" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studentmonitor/studentmonitor/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/studentmonitor/studentmonitor/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,6 +13,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/studentmonitor/studentmonitor/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studentmonitor/studentmonitor/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="386">
+              <caret line="21" column="17" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="17" />
+              <folding>
+                <element signature="e#638#670#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studentmonitor/web/linenotify.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -25,13 +46,18 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Procfile">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="17" selection-start-column="17" selection-end-column="17" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studentmonitor/studentmonitor/wsgi.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -84,7 +110,6 @@
         <option value="$PROJECT_DIR$/studentmonitor/studentmonitor/urls.py" />
         <option value="$PROJECT_DIR$/studentmonitor/web/urls.py" />
         <option value="$PROJECT_DIR$/studentmonitor/web/static/vendor/chart.js/chart.js" />
-        <option value="$PROJECT_DIR$/studentmonitor/studentmonitor/settings.py" />
         <option value="$PROJECT_DIR$/studentmonitor/web/static/vendor/chart.js/utils.js" />
         <option value="$PROJECT_DIR$/studentmonitor/web/templates/layout/base.html" />
         <option value="$PROJECT_DIR$/studentmonitor/web/views.py" />
@@ -94,6 +119,7 @@
         <option value="$PROJECT_DIR$/django.py" />
         <option value="$PROJECT_DIR$/studentmonitor/web/linenotify.py" />
         <option value="$PROJECT_DIR$/Procfile" />
+        <option value="$PROJECT_DIR$/studentmonitor/studentmonitor/settings.py" />
       </list>
     </option>
   </component>
@@ -118,6 +144,12 @@
             <path>
               <item name="StudentMonitoring" type="b2602c69:ProjectViewProjectNode" />
               <item name="StudentMonitoring" type="462c0819:PsiDirectoryNode" />
+              <item name="studentmonitor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StudentMonitoring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StudentMonitoring" type="462c0819:PsiDirectoryNode" />
+              <item name="studentmonitor" type="462c0819:PsiDirectoryNode" />
               <item name="studentmonitor" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -310,7 +342,28 @@
       <option name="project" value="LOCAL" />
       <updated>1563203137501</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="init">
+      <created>1563204032673</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1563204032673</updated>
+    </task>
+    <task id="LOCAL-00016" summary="init">
+      <created>1563204090449</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1563204090449</updated>
+    </task>
+    <task id="LOCAL-00017" summary="init">
+      <created>1563204924877</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1563204924877</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -588,19 +641,6 @@
     <entry file="file://$PROJECT_DIR$/studentmonitor/web/templates/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/studentmonitor/studentmonitor/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="17" />
-          <folding>
-            <element signature="e#638#670#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studentmonitor/studentmonitor/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/studentmonitor/web/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="534">
@@ -639,13 +679,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/django.py" />
-    <entry file="file://$PROJECT_DIR$/studentmonitor/studentmonitor/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="96" column="6" selection-start-line="96" selection-start-column="6" selection-end-line="96" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studentmonitor/studentmonitor/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -680,6 +713,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="17" selection-start-column="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studentmonitor/studentmonitor/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studentmonitor/studentmonitor/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="17" />
+          <folding>
+            <element signature="e#638#670#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studentmonitor/studentmonitor/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
         </state>
       </provider>
     </entry>
