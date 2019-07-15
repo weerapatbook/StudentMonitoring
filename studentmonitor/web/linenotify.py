@@ -9,6 +9,7 @@ import urllib.parse
 LINE_ACCESS_TOKEN="9CD4rqw9Q2Hagu7fopCwWwPeNNHsqBS2yFuXuQoGJIS"
 url = "https://notify-api.line.me/api/notify"
 
+
 def sendMessage(message):
     if message:
         msg = urllib.parse.urlencode({"message": message})
