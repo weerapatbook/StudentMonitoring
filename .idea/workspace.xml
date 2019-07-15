@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dff9f581-164c-415c-a10d-eb6746761a68" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/studentmonitor/web/linenotify.py" beforeDir="false" afterPath="$PROJECT_DIR$/studentmonitor/web/linenotify.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,14 +13,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studentmonitor/web/linenotify.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="260">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="e#56#76#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Procfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="17" selection-start-column="17" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -28,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/studentmonitor/web/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="750">
-              <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
+              <caret line="125" selection-start-line="125" selection-end-line="125" />
             </state>
           </provider>
         </entry>
@@ -37,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/studentmonitor/web/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="197">
-              <caret line="198" lean-forward="true" selection-start-line="198" selection-end-line="198" />
+              <caret line="198" selection-start-line="198" selection-end-line="198" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -83,6 +93,7 @@
         <option value="$PROJECT_DIR$/studentmonitor/web/models.py" />
         <option value="$PROJECT_DIR$/django.py" />
         <option value="$PROJECT_DIR$/studentmonitor/web/linenotify.py" />
+        <option value="$PROJECT_DIR$/Procfile" />
       </list>
     </option>
   </component>
@@ -108,18 +119,6 @@
               <item name="StudentMonitoring" type="b2602c69:ProjectViewProjectNode" />
               <item name="StudentMonitoring" type="462c0819:PsiDirectoryNode" />
               <item name="studentmonitor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StudentMonitoring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StudentMonitoring" type="462c0819:PsiDirectoryNode" />
-              <item name="studentmonitor" type="462c0819:PsiDirectoryNode" />
-              <item name="studentmonitor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StudentMonitoring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StudentMonitoring" type="462c0819:PsiDirectoryNode" />
-              <item name="studentmonitor" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -290,7 +289,28 @@
       <option name="project" value="LOCAL" />
       <updated>1563202831007</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="init">
+      <created>1563203005966</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1563203005966</updated>
+    </task>
+    <task id="LOCAL-00013" summary="init">
+      <created>1563203056181</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1563203056181</updated>
+    </task>
+    <task id="LOCAL-00014" summary="init">
+      <created>1563203137501</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1563203137501</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -307,8 +327,8 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.4892857" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.7173913" visible="true" weight="0.2452381" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.42380953" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.7173913" visible="true" weight="0.43333334" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.2826087" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -380,9 +400,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/studentmonitor/web/static/vendor/jquery/jquery.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$USER_HOME$/Downloads/startbootstrap-simple-sidebar-gh-pages/startbootstrap-simple-sidebar-gh-pages/index.html" />
     <entry file="file://$PROJECT_DIR$/studentmonitor/web/static/vendor/bootstrap/js/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -635,7 +652,7 @@
     <entry file="file://$PROJECT_DIR$/studentmonitor/web/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
-          <caret line="198" lean-forward="true" selection-start-line="198" selection-end-line="198" />
+          <caret line="198" selection-start-line="198" selection-end-line="198" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
@@ -645,17 +662,24 @@
     <entry file="file://$PROJECT_DIR$/studentmonitor/web/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="750">
-          <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/studentmonitor/web/linenotify.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="260">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="e#56#76#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" selection-start-column="17" selection-end-column="17" />
         </state>
       </provider>
     </entry>
