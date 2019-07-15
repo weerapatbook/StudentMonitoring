@@ -11,6 +11,7 @@ url = "https://notify-api.line.me/api/notify"
 
 
 
+
 def sendMessage(message):
     if message:
         msg = urllib.parse.urlencode({"message": message})
